@@ -33,8 +33,7 @@ public class ShopRepositoryTest {
         Product[] productsBefore = sr.findAll();
 
 
-
-            sr.removeById(2);
+        sr.removeById(2);
 
 
         Product[] productsAfter = sr.findAll();
