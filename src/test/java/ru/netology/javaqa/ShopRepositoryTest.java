@@ -28,16 +28,14 @@ public class ShopRepositoryTest {
     }
 
     @Test
-    public void shouldRemoveById() {
+    public void shouldRemoveById() throws Exception {
 
         Product[] productsBefore = sr.findAll();
 
 
-        try {
+
             sr.removeById(2);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+
 
         Product[] productsAfter = sr.findAll();
 
