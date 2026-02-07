@@ -28,7 +28,7 @@ public class ShopRepositoryTest {
     }
 
     @Test
-    public void shouldRemoveById(){
+    public void shouldRemoveById() {
 
         Product[] productsBefore = sr.findAll();
 
@@ -39,7 +39,7 @@ public class ShopRepositoryTest {
             throw new RuntimeException(e);
         }
 
-        Product[] productsAfter =sr.findAll();
+        Product[] productsAfter = sr.findAll();
 
         Assertions.assertEquals(2, productsAfter.length);
 
@@ -47,7 +47,7 @@ public class ShopRepositoryTest {
     }
 
     @Test
-    public void shouldNotFoundException(){
+    public void shouldNotFoundException() {
 
         Assertions.assertThrows(NotFoundException.class, () -> {
             sr.removeById(4);
